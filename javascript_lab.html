@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            text-align: center;
+            border: 2px solid grey;
+            background-color: lightblue;
+            border-radius: 15px;
+        }
+
+        table td {
+            width: 50px;
+            height: 50px;
+        }
+
+        table button {
+            width: 100%;
+            height: 100%;
+            background-color: azure;
+            border-radius: 20%;
+        }
+
+    </style>
+    <script>
+        var x;
+
+        function MC() {
+            x = "";
+        }
+        function MS() {
+            x = document.getElementById("output").value;
+        }
+
+        function MR() {
+            document.getElementById("output").value = x;
+        }
+
+
+        function Mplus() {
+
+            x = parseInt(x, 10) + parseInt(document.getElementById("output").value, 10);
+
+        }
+
+
+        function listen(evt) {
+            var han;
+            evt || (evt = window.event);
+
+            if (evt) {
+                var elem = evt.target ? han = evt.target : evt.srcElement && (han = evt.srcElement);
+                if (evt.type == "click" && elem.id == "gotit" || elem.className == "someClassName") {
+                    alert(elem.id);
+                }
+            }
+        }
+
+        dot = document.getElementById("output");
+
+    </script>
+</head>
+
+<body>
+	<h1>Junaid's Calculator</h1><br><br>
+    <table align="center">
+        <tr>
+            <td colspan="5"><input type="text" name="output" id="output" value='' style="width:90%;height: 70%;"></td>
+        </tr>
+
+        <tr class="row1" id="row1">
+            <td id="MC"><button class="MC" value="MC" onclick="MC()">MC</button></td>
+            <td id="j0"><button class="j0" value="0" onclick="document.getElementById('output').value += '0'">0</button></td>
+            <td id="j1"><button class="j1" value="1" onclick="document.getElementById('output').value += '1'">1</button></td>
+            <td id="j2"><button class="j2" value="2" onclick="document.getElementById('output').value += '2'">2</button></td>
+
+            <td id="j+"><button class="j+" value="+" onclick="document.getElementById('output').value += '+'">+</button></td>
+        </tr>
+
+        <tr>
+            <td id="MS"><button class="MS" value="MS" onclick="MS()">MS</button></td>
+            <td id="j3"><button class="j3" value="3" onclick="document.getElementById('output').value += '3'">3</button></td>
+            <td id="j4"><button class="j4" value="4" onclick="document.getElementById('output').value += '4'">4</button></td>
+            <td id="j5"><button class="j5" value="5" onclick="document.getElementById('output').value += '5'">5</button></td>
+            <td id="j-"><button class="j-" value="-" onclick="document.getElementById('output').value += '-'">-</button></td>
+        </tr>
+        <tr>
+            <td id="MR"><button class="MR" value="MR" onclick="MR()">MR</button></td>
+            <td id="j6"><button class="j6" value="6" onclick="document.getElementById('output').value += '6'">6</button></td>
+            <td id="j7"><button class="j7" value="7" onclick="document.getElementById('output').value += '7'">7</button></td>
+            <td id="j8"><button class="MC" value="8" onclick="document.getElementById('output').value += '8'">8</button></td>
+            <td id="x"><button class="MC" value="x" onclick="document.getElementById('output').value += '*'">x</button></td>
+        </tr>
+        <tr>
+            <td id="M+"><button class="MC" value="M+" onclick="Mplus()">M+</button></td>
+            <td id="j9"><button class="j9" value="9" onclick="document.getElementById('output').value += '9'">9</button></td>
+            <td id="+-"><button class="+-" value="+-" onclick="document.getElementById('output').value = document.getElementById('output').value * (-1)">+
+                    -
+                </button></td>
+            <td id="j="><button class="j=" value="=" onclick="document.getElementById('output').value = eval(document.getElementById('output').value)">=</button></td>
+            <td id="j/"><button class="j/" value="/" onclick="document.getElementById('output').value += '/'">/</button></td>
+        </tr>
+        <tr>
+            <td id="j1/x"><button class="j1/x" value="1/x" onclick="document.getElementById('output').value= 1/document.getElementById('output').value  ">1/x</button></td>
+            <td id="j."><button id="j." value="." onclick="document.getElementById('output').value += '.0'">.</button></td>
+            <td id="jx2"><button class="jx2" value="x2" onclick="document.getElementById('output').value =  document.getElementById('output').value ** 2">x2</button></td>
+            <td id="jsqrt"><button class="jroot" value="root" onclick="document.getElementById('output').value = document.getElementById('output').value ** 0.5">&#8730;</button></td>
+            <td id="C"><button class="C" value="C" onclick="document.getElementById('output').value = '' ">C</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
