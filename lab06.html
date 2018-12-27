@@ -1,0 +1,272 @@
+<HTML>
+<head>
+<style>
+body {
+	margin: 20px;
+	background-color: #1D3030;
+	color: white;
+}
+
+.card {
+	height: 300px;
+	width: 250px;
+	margin: 5px;
+	border: 1px solid black;
+	float: left;
+	position: relative;
+	box-shadow: 2px 2px 2px 2px #666666;
+}
+
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 250px;
+  height: 300px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+.card:hover .middle {
+  opacity: 1;
+}
+
+.card:hover .image {
+	opacity: 0.3;
+}
+
+.card .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 101%;
+    left: 30%;
+    margin-left: -60px;
+}
+
+.card .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.card:hover .tooltiptext {
+    visibility: visible;
+}
+
+</style>
+</head>
+
+<body>
+<h1><center>Movies Card Gallery</center></h1>
+<div align = "center" width = "100%" height = "30%" style = "border:1px solid black; background-color:#2F4F4F">
+	<table width = "100%">
+		<TR>
+			<TH>Action</TH>
+			<TH>Comedy</TH>
+			<TH>Thriller</TH>
+			<TH>Sci-Fi</TH>
+			<TH>Adventure</TH>
+		</TR>
+	</table>
+</div>
+
+<div class = "card" id = "action">
+	<img src = "https://ia.media-imdb.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Action<br>
+		<b>IMDb:</b>7.8/10<br>
+		<b>Cast:</b>Chadwick Boseman, Micheal B. Jordan, Lupita Nyong'o
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> T'Challa, the King of Wakanda, rises to the throne in the isolated, technologically advanced African nation, but his claim is challenged by a vengeful outsider who was a childhood victim of T'Challa's father's mistake.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://fanart.tv/fanart/movies/76493/movieposter/the-dictator-5215274eef7ff.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Comedy<br>
+		<b>IMDb:</b>6.4/10<br>
+		<b>Cast:</b>Sacha Baron Cohen, Anna Faris, Megan Fox
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> The heroic story of a dictator who risked his life to ensure that democracy would never come to the country he so lovingly oppressed.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://www.discshop.fi/img/front_large/102411/gone_girl_kiltti_tytto_blu_ray.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Thriller<br>
+		<b>IMDb:</b>8.1/10<br>
+		<b>Cast:</b>Ben Affleck, Rosamund Pike
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://1645110239.rsc.cdn77.org/image/f660x940/q80/mm/benl/movies14842/posters/the-martian.20170303015005.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Sci-Fi<br>
+		<b>IMDb:</b>8/10<br>
+		<b>Cast:</b>Matt Damon, Jessica Chastain
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://images-na.ssl-images-amazon.com/images/I/91I2JspDFLL._RI_.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Adventure<br>
+		<b>IMDb:</b>7.4/10<br>
+		<b>Cast:</b>Gal Gadot, Chris Pine
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny.</div>
+</div>
+
+<div class = "card" id = "action">
+	<img src = "https://upload.wikimedia.org/wikipedia/sr/thumb/4/42/Logan_poster.jpg/250px-Logan_poster.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Action<br>
+		<b>IMDb:</b>8.1/10<br>
+		<b>Cast:</b>Hugh Jackman, Dafne Keen
+		<b>Director:</b>James Mangold
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border. However, Logan's attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.</div>
+</div>
+
+<div class = "card">
+	<img src = "http://www.filmkonusu.com/uploads/film/2017/10/felekten-bir-gece-228.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Comedy<br>
+		<b>IMDb:</b>7.7/10<br>
+		<b>Cast:</b>Zach Galifianakis, Bradley Cooper, Ed Helms
+		<b>Director:</b>Todd Phillips
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://www.skip.at/media/_versions/filme/10442/pger/1_zoom.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Comedy<br>
+		<b>IMDb:</b>7.0/10<br>
+		<b>Cast:</b>Ben Stiller, Jack Black, Robert Downey Jr.
+		<b>Director:</b>Ben Stiller
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> Through a series of freak occurrences, a group of actors shooting a big-budget war movie are forced to become the soldiers they are portraying.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://vignette.wikia.nocookie.net/mrbean/images/3/32/English.jpg/revision/latest?cb=20120805165039&path-prefix=es" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Comedy<br>
+		<b>IMDb:</b>6.1/10<br>
+		<b>Cast:</b>Rowan Atkinson, John Malkovich
+		<b>Director:</b>Peter Howitt
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> After a sudden attack on the MI5, Johnny English, Britain's most confident yet unintelligent spy, becomes Britain's only spy.</div>
+</div>
+
+<div class = "card" id = "action">
+	<img src = "http://m.blog.hu/ha/halfpecssquad/image/april-dark-knight-poster.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Action<br>
+		<b>IMDb:</b>9.1/10<br>
+		<b>Cast:</b>Christian Bale, Heath Ledger
+		<b>Director:</b>Christopher Nolan
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham, the Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.</div>
+</div>
+
+<div class = "card" id = "action">
+	<img src = "https://images-na.ssl-images-amazon.com/images/I/51KVimoDYrL._SY355_.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Action<br>
+		<b>IMDb:</b>8.9/10<br>
+		<b>Cast:</b>Leonardo DiCaprio, Joseph Gordon, Ellen Page
+		<b>Director:</b>Christopher Nolan
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> A thief, who steals corporate secrets through the use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://ia.media-imdb.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Adventure<br>
+		<b>IMDb:</b>8.6/10<br>
+		<b>Cast:</b>Russell Crowe, Connie Nielsen
+		<b>Director:</b>Ridley Scott
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> When a Roman General is betrayed, and his family murdered by an emperor's corrupt son, he comes to Rome as a gladiator to seek revenge.</div>
+</div>
+
+<div class = "card">
+	<img src = "http://www.filmtett.ro/thumb/cropped/800x1066/film_2493/ryan-kozlegeny-megmentese-saving-private-ryan.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Adventure<br>
+		<b>IMDb:</b>8.7/10<br>
+		<b>Cast:</b>Tom Hanks, Matt Damon, Edward Burns
+		<b>Director:</b>Steven Spielberg
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b> Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://ia.media-imdb.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Thriller<br>
+		<b>IMDb:</b>8.6/10<br>
+		<b>Cast:</b>Chritian Bale, Tom Hardy, Anne Hatheway
+		<b>Director:</b>Christopher Nolan
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b>Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City, now on the edge of total annihilation, from the brutal guerrilla terrorist Bane.
+</div>
+</div>
+
+<div class = "card">
+	<img src = "https://images-na.ssl-images-amazon.com/images/I/71QCEgpWDCL._SX355_.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Thriller<br>
+		<b>IMDb:</b>8.2/10<br>
+		<b>Cast:</b>Daniel Craig, Eva Green
+		<b>Director:</b>Martin Campbell
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b>Armed with a license to kill, Secret Agent James Bond sets out on his first mission as 007, and must defeat a private banker to terrorists in a high stakes game of poker at Casino Royale, Montenegro, but things are not what they seem.</div>
+</div>
+
+<div class = "card">
+	<img src = "https://www.studyoneo.com/wp-content/uploads/2017/11/dk-0040.jpg" class = "image">
+	<div class = "middle">
+		<b>Genre:</b>Sci-Fi<br>
+		<b>IMDb:</b>8.0/10<br>
+		<b>Cast:</b>Sam Worthington, Zoe Saldana
+		<b>Director:</b>James Cameroon
+	</div>
+	<div class = "tooltiptext"><b>Plot:</b>A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</div>
+</div>
+
+</body>
+
+</HTML>
